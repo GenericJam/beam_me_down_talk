@@ -35,6 +35,7 @@ defmodule BeamMeDownTalk.SlidesWindow do
         2 -> [slide_image_node("dumb_glass.png", 600)]
         3 -> [slide_image_node("cant_handle_beam.png", 600)]
         4 -> [slide_image_node("wall_plug.png", 600)]
+        5 -> [slide_image_node("compat_layer.png", 600)]
         _ -> []
       end
 
