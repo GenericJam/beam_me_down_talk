@@ -32,6 +32,7 @@ defmodule BeamMeDownTalk.SlidesWindow do
       case assigns.index do
         0 -> [title_image_node()]
         1 -> [slide_image_node("axd301.png", 300)]
+        2 -> [slide_image_node("dumb_glass.png", 600)]
         _ -> []
       end
 
