@@ -28,7 +28,12 @@ defmodule BeamMeDownTalk.SlidesWindow do
     slide = Enum.at(assigns.slides, assigns.index)
     total = length(assigns.slides)
 
-    extra = if assigns.index == 0, do: [title_image_node()], else: []
+    extra =
+      case assigns.index do
+        0 -> [title_image_node()]
+        1 -> [slide_image_node("axd301.png", 300)]
+        _ -> []
+      end
 
     %{
       type: :column,
@@ -72,8 +77,12 @@ defmodule BeamMeDownTalk.SlidesWindow do
   end
 
   defp title_image_node do
-    path = :code.priv_dir(:beam_me_down_talk) |> Path.join("title.png") |> to_string()
-    %{type: :image, props: %{src: path, width: 600}, children: []}
+    slide_image_node("title.png", 600)
+  end
+
+  defp slide_image_node(filename, width) do
+    path = :code.priv_dir(:beam_me_down_talk) |> Path.join(filename) |> to_string()
+    %{type: :image, props: %{src: path, width: width}, children: []}
   end
 
   defp title_node(%{title: title}) do
