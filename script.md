@@ -39,11 +39,31 @@ already own. This is the thesis statement — say it slowly.
 
 ## 6. Why Now
 
-Three forces, don't rush them: LLMs commoditizing the coding labor (the
-work of building this got cheaper), a growing cultural aversion to being
-tethered to someone else's server, and — bluntly — somebody pays the infra
-bill, and as an indie dev that somebody is you unless you push it onto the
-user's machine.
+Lead with the compatibility layer flip. The browser won as the delivery
+mechanism in the 2000s for two reasons: OSes were fractured (write once,
+run anywhere was a real problem), and the delivery model for native apps was
+clumsy — ship a binary, hope the user installs it. At the same time, cloud
+hosting was cheap and developer labour was expensive, so putting everything
+on a server and shipping a thin client made economic sense.
+
+Both of those conditions have almost exactly inverted. Cloud isn't cheap
+anymore — every request costs money, and the bills compound with scale.
+Developer labour *looks* cheap right now because LLMs are being subsidised
+heavily, but the underlying point is that the *work* of achieving
+cross-platform compatibility is no longer the bottleneck it was. You can
+put the compatibility layer in the framework instead of the browser: either
+compile to every platform from one codebase (Compose Multiplatform, Flutter)
+or define grouped elements and tune per platform — which is exactly what mob
+does. The browser as a compatibility shim is a solution to a problem that's
+largely been solved elsewhere, at a cost (no real OS permissions, bundled
+runtime, a whole browser engine as overhead) that was always there but easy
+to ignore when the alternative was harder.
+
+Then the other three forces, don't rush them: LLMs commoditizing the coding
+labor (the work of building this got cheaper), a growing cultural aversion to
+being tethered to someone else's server, and — bluntly — somebody pays the
+infra bill, and as an indie dev that somebody is you unless you push it onto
+the user's machine.
 
 ## 7. Desktop's Been Tried Before
 

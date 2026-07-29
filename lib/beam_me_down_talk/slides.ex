@@ -43,6 +43,7 @@ defmodule BeamMeDownTalk.Slides do
       %{
         title: "Why Now",
         bullets: [
+          "The browser was the compatibility layer. Now the framework is.",
           "LLMs commoditize the coding labor",
           "Growing aversion to being tethered",
           "Someone pays the infra bill — why you?"
