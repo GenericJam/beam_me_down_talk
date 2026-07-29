@@ -1,0 +1,1 @@
+Rext.boot(BeamMeDownTalk)
