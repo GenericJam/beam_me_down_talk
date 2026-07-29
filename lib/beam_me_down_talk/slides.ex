@@ -66,7 +66,7 @@ defmodule BeamMeDownTalk.Slides do
         ]
       },
       %{
-        title: "The Honest Limit",
+        title: "Proven vs Vaporware",
         bullets: [
           "Proven: hot-swapping Elixir code",
           "Unproven: hot-swapping the native NIF itself",

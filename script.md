@@ -78,7 +78,7 @@ Second objection, staged as a question: no server round-trip, so how does
 it stay in sync? Pause half a beat before the answer. Hot code upgrade.
 Day one. Erlang. 1986. Let that sit — it's the best line in this section.
 
-## 9. The Honest Limit
+## 9. Proven vs Vaporware
 
 Don't skip this — it's the credibility beat. Be precise: proven is
 hot-swapping *Elixir* code. Unproven is hot-swapping the native NIF/renderer
