@@ -28,10 +28,12 @@ defmodule BeamMeDownTalk.SlidesWindow do
     slide = Enum.at(assigns.slides, assigns.index)
     total = length(assigns.slides)
 
+    extra = if assigns.index == 0, do: [title_image_node()], else: []
+
     %{
       type: :column,
       props: %{gap: :space_lg, padding: :space_xl, background: :background},
-      children: [title_node(slide) | bullet_nodes(slide)] ++ [nav_row(assigns.index, total)]
+      children: [title_node(slide)] ++ extra ++ bullet_nodes(slide) ++ [nav_row(assigns.index, total)]
     }
   end
 
@@ -67,6 +69,11 @@ defmodule BeamMeDownTalk.SlidesWindow do
     Rext.Socket.update(socket, :index, fn i ->
       i |> Kernel.+(delta) |> max(0) |> min(total - 1)
     end)
+  end
+
+  defp title_image_node do
+    path = :code.priv_dir(:beam_me_down_talk) |> Path.join("title.png") |> to_string()
+    %{type: :image, props: %{src: path, width: 600}, children: []}
   end
 
   defp title_node(%{title: title}) do
