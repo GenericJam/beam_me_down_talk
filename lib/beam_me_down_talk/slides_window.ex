@@ -110,25 +110,9 @@ defmodule BeamMeDownTalk.SlidesWindow do
 
   defp nav_row(index, total) do
     %{
-      type: :row,
-      props: %{gap: :space_md},
-      children: [
-        %{
-          type: :button,
-          props: %{label: "‹ Prev", on_click: :prev, color: :surface},
-          children: []
-        },
-        %{
-          type: :text,
-          props: %{text: "#{index + 1} / #{total}", size: 14, color: :muted},
-          children: []
-        },
-        %{
-          type: :button,
-          props: %{label: "Next ›", on_click: :next, color: :surface},
-          children: []
-        }
-      ]
+      type: :text,
+      props: %{text: "#{index + 1} / #{total}", size: 14, color: :muted},
+      children: []
     }
   end
 end
