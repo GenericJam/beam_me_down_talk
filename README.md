@@ -51,8 +51,14 @@ elixir --name talk@127.0.0.1 --cookie rext_secret -S mix run --no-halt dev/demo.
 
 # terminal 2 — the render backend (cross-platform: macOS + Linux verified)
 cd ../rext/native/compose
-REXT_PORT=8137 REXT_WINDOW=main ./gradlew run
+REXT_PORT=8137 REXT_WINDOW=main REXT_ICON=../../../beam_me_down_talk/priv/icon.png ./gradlew run
 ```
+
+`REXT_ICON` is optional, generic support added to rext's shared Compose
+renderer (any app can brand its window this way) — points at `priv/icon.png`
+in this repo. On macOS this also sets the Dock icon (`java.awt.Taskbar`);
+plain `Window(icon=)` alone only covers the title bar there, though it's
+enough on its own for Linux/Windows taskbars.
 
 ## Drive it live
 

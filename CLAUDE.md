@@ -58,8 +58,16 @@ render backend are launched by hand instead (see `dev/demo.exs`):
 elixir --name talk@127.0.0.1 --cookie rext_secret -S mix run --no-halt dev/demo.exs
 
 # terminal 2 — the render backend (macOS + Linux verified; see rext/PLAN.md)
-cd ../rext/native/compose && REXT_PORT=8137 REXT_WINDOW=main ./gradlew run
+cd ../rext/native/compose && REXT_PORT=8137 REXT_WINDOW=main REXT_ICON=../../../beam_me_down_talk/priv/icon.png ./gradlew run
 ```
+
+`REXT_ICON` is generic, optional support in `rext`'s shared renderer
+(`native/compose/src/main/kotlin/Main.kt` — `loadIcon`/`setDockIcon`), not
+talk-specific: any rext app can point it at its own image. On macOS, plain
+AWT `Frame.setIconImage` (what Compose's `Window(icon=)` sets) only reaches
+the title bar — the Dock icon needs `java.awt.Taskbar.setIconImage`
+explicitly, which `setDockIcon` does. If a future icon-related bug only
+reproduces on macOS, check that split first.
 
 `mix rext.connect` (from `rext_dev`) still works normally for driving it —
 that task doesn't touch the renderer at all, it's a plain `iex --remsh` into
