@@ -37,6 +37,7 @@ defmodule BeamMeDownTalk.SlidesWindow do
         4 -> [slide_image_node("wall_plug.png", 600)]
         5 -> [slide_image_node("compat_layer.png", 600)]
         6 -> [slide_image_node("bundled_browser.png", 600)]
+        7 -> [slide_image_node("delivery.png", 600)]
         _ -> []
       end
 
