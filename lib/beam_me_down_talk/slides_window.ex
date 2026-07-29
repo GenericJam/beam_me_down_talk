@@ -46,6 +46,7 @@ defmodule BeamMeDownTalk.SlidesWindow do
         13 -> [slide_image_node("portal.png", 600)]
         14 -> [slide_image_node("nerves.png", 600)]
         15 -> [slide_image_node("desktop_hub.png", 600)]
+        16 -> [slide_image_node("agent_neo.png", 600)]
         _ -> []
       end
 
