@@ -43,6 +43,7 @@ defmodule BeamMeDownTalk.SlidesWindow do
         10 -> [slide_image_node("roadmap.jpg", 600)]
         11 -> [slide_image_node("two_nodes.png", 600)]
         12 -> [slide_image_node("two_nodes.png", 600)]
+        13 -> [slide_image_node("portal.png", 600)]
         _ -> []
       end
 
