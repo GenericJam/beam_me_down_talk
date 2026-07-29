@@ -61,6 +61,10 @@ elixir --name talk@127.0.0.1 --cookie rext_secret -S mix run --no-halt dev/demo.
 cd ../rext/native/compose && REXT_PORT=8137 REXT_WINDOW=main REXT_ICON=../../../beam_me_down_talk/priv/icon.png ./gradlew run
 ```
 
+`REXT_SCALE` is optional: the renderer auto-detects HiDPI scale from `Xft.dpi` (X11),
+falling back to `GDK_SCALE`. Set it explicitly to override (e.g. `REXT_SCALE=2`). On a
+200% desktop with `Xft.dpi: 192` the auto-detection kicks in automatically — no flag needed.
+
 `REXT_ICON` is generic, optional support in `rext`'s shared renderer
 (`native/compose/src/main/kotlin/Main.kt` — `loadIcon`/`setDockIcon`), not
 talk-specific: any rext app can point it at its own image. On macOS, plain
