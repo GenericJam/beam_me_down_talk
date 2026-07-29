@@ -58,7 +58,7 @@ defmodule BeamMeDownTalk.Slides do
         ]
       },
       %{
-        title: "Won't It Go Stale?",
+        title: "What About Delivery?",
         bullets: [
           "No server round-trip — so no sync?",
           "Hot code upgrade.",

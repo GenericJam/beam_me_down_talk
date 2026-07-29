@@ -72,7 +72,7 @@ to the user." Name the actual failure modes — a bundled browser, no real OS
 permission integration — and the one-line answer: a native renderer
 sidesteps both, because you're not shipping a browser at all.
 
-## 8. Won't It Go Stale?
+## 8. What About Delivery?
 
 Second objection, staged as a question: no server round-trip, so how does
 it stay in sync? Pause half a beat before the answer. Hot code upgrade.
