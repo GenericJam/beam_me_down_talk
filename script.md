@@ -94,21 +94,13 @@ Transition into the live segment. Same trick as mob: BEAM owns the view
 tree, the native backend just draws it. Say plainly: this talk is running
 on it right now.
 
-## 11. Live
-
-**Demo cue.** Open a second terminal, `mix rext.connect` into the running
-node, call `BeamMeDownTalk.SlidesWindow.next()` — advance a slide *without
-touching the keyboard on the deck itself*. This is the whole thesis in one
-motion: state lives on the BEAM, no rebuild, connect from anywhere. Don't
-over-narrate the mechanics; let the slide visibly change be the point.
-
-## 12. Roadmap of the Possible
+## 11. Roadmap of the Possible
 
 Section break. Say explicitly: everything from here is more speculative —
 things enabled by desktop that aren't fully built yet. Label it as such so
 nobody mistakes the next few slides for shipped features.
 
-## 13. Restart Without Losing the User
+## 12. Restart Without Losing the User
 
 The idea: a full node restart to pick up a native dependency change (Rust,
 Python) that can't be hot-loaded as bytecode. Display node holds the last
@@ -119,13 +111,13 @@ at whole-process death instead of a bad code edit. Credit that it's
 unbuilt — sloppy_joe's own roadmap calls the mobile version of this its
 hardest unsolved problem.
 
-## 14. Never Left Broken
+## 13. Never Left Broken
 
 Short, connective beat: rollback/last-known-good tracking belongs on the
 desktop base node too, same as sloppy_joe already does for mobile. Not a
 new idea, just the same one applied consistently.
 
-## 15. Portal
+## 14. Portal
 
 The clustering pitch. Anticipate the skeptical question before it's asked:
 why is phone+laptop different from phone+phone (which mob rejected on
@@ -137,21 +129,21 @@ version of that, not a vendor's fixed feature list. Land the two concrete
 examples back to back: scan a document on the phone, collate into a PDF on
 the laptop; scan a barcode on the phone, pull up inventory on the laptop.
 
-## 16. Nerves
+## 15. Nerves
 
 One more example, different shape: a headless Nerves board has no screen.
 The phone becomes its display/controller over the same clustering idea —
 not compute-offload this time, just "the phone already has a screen and you
 already carry it around."
 
-## 17. Desktop as a Hub
+## 16. Desktop as a Hub
 
 Closing the roadmap section: once the desktop app exists, hop back to the
 phone two ways — a local PWA (already an anticipated extension of rext's
 own transport design, not new architecture) or a dev-mode sideload reusing
 mob's existing deploy tooling.
 
-## 18. Built for Agents
+## 17. Built for Agents
 
 The icing. mob's BEAM dist + observability already makes it a strong agent
 target; rext just proved the same thing works on desktop, live, in this
@@ -160,7 +152,7 @@ explicitly: one framework for mobile, one for desktop — no bespoke MCP
 server or IDE plugin per toolkit, because BEAM distribution gives every app
 built on it the same agent surface for free.
 
-## 19. The BEAM Came Home
+## 18. The BEAM Came Home
 
 Close. Don't add new content — just land the title again now that the
 whole argument is behind it. Let it be quiet.

@@ -82,13 +82,6 @@ defmodule BeamMeDownTalk.Slides do
           "This talk is the proof"
         ]
       },
-      %{
-        title: "Live",
-        bullets: [
-          "This deck IS the app",
-          "Connect over dist. Drive it. No rebuild."
-        ]
-      },
       %{title: "Roadmap of the Possible", bullets: []},
       %{
         title: "Restart Without Losing the User",
